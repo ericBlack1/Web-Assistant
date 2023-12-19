@@ -9,35 +9,35 @@
 			
 	<body>
 		<div class="container-fluid h-100">
-				<div class="row justify-content-center h-100">
-						<div class="card">
-							<div class="card-header msg_head">
-								<div class="d-flex bd-highlight">
-									<div class="img_cont">
-										<img src="https://res.cloudinary.com/dxz57onca/image/upload/v1702957345/Pizzas/mtxyvxmdzgjfrmwr1beo.jpg" class="rounded-circle user_img">
-										<span class="online_icon"></span>
-									</div>
-									<div class="user_info">
-										<span><b>Medic-Bot</b></span>
-										<p>How may I help you?</p>
-									</div>
-								</div>
+			<div class="row justify-content-center h-100">
+				<div class="card">
+					<div class="card-header msg_head">
+						<div class="d-flex bd-highlight">
+							<div class="img_cont">
+								<img src="https://res.cloudinary.com/dxz57onca/image/upload/v1702957345/Pizzas/mtxyvxmdzgjfrmwr1beo.jpg" class="rounded-circle user_img">
+								<span class="online_icon"></span>
 							</div>
-							<div id="chat-history" class="text">
-								{% for message in messages %}
-									<p>{{ message['role'].capitalize() }}: {{ message['content'] }}</p>
-								{% endfor %}
-							</div>
-							<div class="card-footer">
-								<form id="messageArea" class="input-group">
-									<input type="text" id="user-input" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
-									<div class="input-group-append">
-										<button type="submit" id="send" class="input-group-text send_btn" onclick="sendMessage()"><i class="fas fa-location-arrow"></i></button>
-									</div>
-								</form>
+							<div class="user_info">
+								<span><b>Medic-Bot</b></span>
+								<p>How may I help you?</p>
 							</div>
 						</div>
+					</div>
+					<div id="chat-history" class="text">
+						{% for message in messages %}
+							<p>{{ message['role'].capitalize() }}: {{ message['content'] }}</p>
+						{% endfor %}
+					</div>
+					<div class="card-footer">
+						<form id="messageArea" class="input-group">
+							<input type="text" id="user-input" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
+							<div class="input-group-append">
+								<button type="submit" id="send" class="input-group-text send_btn" onclick="sendMessage()"><i class="fas fa-location-arrow"></i></button>
+							</div>
+						</form>
+					</div>
 				</div>
+			</div>
 		</div>
 		<script>
 			function sendMessage() {
