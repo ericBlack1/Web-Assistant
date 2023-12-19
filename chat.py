@@ -4,7 +4,7 @@ from openai import OpenAI
 app = Flask(__name__)
 
 client = OpenAI(
-    api_key="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"
+    api_key="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"
 )
 
 messages = [{"role": "assistant", "content": "How can I help you?"}]
